@@ -14,7 +14,7 @@ function addUsers(data) {
         let $state = data[i].state;
 
         let $newUser = $(`<div>
-                            <li> 
+                            <li class="list-group-item"> 
                                 ID: ${$id} <br>
                                 Email: ${$email} <br>
                                 First name: ${$firstName} <br>

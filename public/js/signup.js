@@ -10,6 +10,6 @@ $("#form").on('submit', function (e) {
 
 async function addUser(email, firstName, lastName) {
     let res = await axios.post("http://localhost:3000/users",{ email, firstName, lastName});
-
-    console.log(res.data);
+    const $addedUser = $("#addedUser"); 
+    $addedUser.append(`<p>New user added: ${res.data.firstName} ${res.data.lastName}</p>`)
 }
